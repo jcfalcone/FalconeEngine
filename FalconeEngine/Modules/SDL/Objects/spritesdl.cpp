@@ -2,11 +2,11 @@
 #include "../../../Managers/ObjectControl.h"
 #include "../Manager/rendersdl.h"
 
-SpriteSDL::SpriteSDL() : path(""), rend(nullptr)
+SpriteSDL::SpriteSDL() : path(""), rend(nullptr), texture(nullptr)
 {
 }
 
-SpriteSDL::SpriteSDL(std::string _path) : path(_path), rend(nullptr)
+SpriteSDL::SpriteSDL(std::string _path) : path(_path), rend(nullptr), texture(nullptr)
 {
 
 }
@@ -22,6 +22,11 @@ void SpriteSDL::Start()
     {
         if (renderSDL *render = dynamic_cast<renderSDL*>(FalconeEngine::ObjectControl::Instance()->getRender()))
         {
+            if(this->texture != nullptr)
+            {
+                SDL_DestroyTexture(this->texture);
+            }
+
             this->rend = render;
 
             this->texture = IMG_LoadTexture(render, this->path.c_str());
