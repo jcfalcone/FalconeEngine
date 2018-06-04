@@ -1,7 +1,6 @@
 #include "uitemplate.h"
 
 #include <iostream>
-#include "../stdafx.h"
 
 namespace FalconeEngine
 {

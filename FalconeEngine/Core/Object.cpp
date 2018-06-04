@@ -2,7 +2,7 @@
 
 #include <algorithm>
 
-#include "ObjectControl.h"
+#include "../Managers/ObjectControl.h"
 #include "Component.h"
 
 namespace FalconeEngine

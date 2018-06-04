@@ -4,8 +4,6 @@
 #include <string>
 #include <map>
 
-#include "../stdafx.h"
-
 #include "Vector2.h"
 #include "behavior.h"
 #include "Component.h"
@@ -108,11 +106,11 @@ namespace FalconeEngine
 			}
 
 			return nullptr;
-		};
+        }
 
         virtual void Start();
 
-		virtual void Object::StartComponents();
+        virtual void StartComponents();
 
         virtual void Update(float deltaTime);
 

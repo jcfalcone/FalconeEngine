@@ -5,7 +5,7 @@
 #include "spherecollider.h"
 #include "boxcollider.h"
 
-#include "Vector2.h"
+#include "../Core/Vector2.h"
 #include "rigidbody.h"
 
 #include <algorithm>
@@ -181,10 +181,10 @@ namespace FalconeEngine
 		// The extreme point along a direction within a polygon
 		Vector2 PolyCollider::GetSupport(const Vector2& dir)
 		{
-			float bestProjection = -FLT_MAX;
+            //float bestProjection = -FLT_MAX;
 			Vector2 bestVertex;
 
-			for (int count = 0; count < this->vertexCount; ++count)
+            /*for (int count = 0; count < this->vertexCount; ++count)
 			{
 				Vector2 vertice = this->vertices[count];
 				float projection = vertice.Dot(dir);
@@ -194,7 +194,7 @@ namespace FalconeEngine
 					bestVertex = vertice;
 					bestProjection = projection;
 				}
-			}
+            }*/
 
 			return bestVertex;
 		}
@@ -231,7 +231,7 @@ namespace FalconeEngine
 			this->lastData.object = this;
 			this->lastData.other = other;
 
-			if (PolyCollider* collider = dynamic_cast<PolyCollider*>(other))
+            /*if (PolyCollider* collider = dynamic_cast<PolyCollider*>(other))
 			{
 				// Check for a separating axis with A's face planes
 				int faceA;
@@ -332,17 +332,17 @@ namespace FalconeEngine
 				}
 
 				return true;
-			}
+            }*/
 
 			return false;
 		}
 
 		float PolyCollider::FindAxisLeastPenetration(int *faceIndex, PolyCollider * _other)
 		{
-			float bestDistance = -FLT_MAX;
-			int bestIndex;
+            float bestDistance = 0;//-FLT_MAX;
+            //int bestIndex;
 
-			for (int count = 0; count < this->vertexCount; ++count)
+            /*for (int count = 0; count < this->vertexCount; ++count)
 			{
 				// Retrieve a face normal from A
 				Vector2 normal = this->normals[count];
@@ -369,7 +369,7 @@ namespace FalconeEngine
 				}
 			}
 
-			*faceIndex = bestIndex;
+            *faceIndex = bestIndex;*/
 			return bestDistance;
 		}
 
@@ -377,7 +377,7 @@ namespace FalconeEngine
 		{
 			std::vector<Vector2> vertice;
 
-			Vector2 referenceNormal = RefPoly->GerNormal()[referenceIndex];
+            /*Vector2 referenceNormal = RefPoly->GerNormal()[referenceIndex];
 
 			// Calculate normal in incident's frame of reference
 			referenceNormal = RefPoly->GetMatrix() * referenceNormal; // To world space
@@ -401,7 +401,7 @@ namespace FalconeEngine
 			// Assign face vertices for incidentFace
 			vertice.push_back(IncPoly->GetMatrix() * (IncPoly->GetVertices()[incidentFace] + IncPoly->GetPosition()));
 			incidentFace = incidentFace + 1 >= IncPoly->GetVerticesCount() ? 0 : incidentFace + 1;
-			vertice.push_back(IncPoly->GetMatrix() * (IncPoly->GetVertices()[incidentFace] + IncPoly->GetPosition()));
+            vertice.push_back(IncPoly->GetMatrix() * (IncPoly->GetVertices()[incidentFace] + IncPoly->GetPosition()));*/
 
 			return vertice;
 		}

@@ -1,9 +1,7 @@
 #include "Physics.h"
-#include "Object.h"
+#include "../Core/Object.h"
 
-#include "../stdafx.h"
 #include "collider.h"
-#include "../App/app.h"
 
 #include <string>
 #include <algorithm>
@@ -72,7 +70,7 @@ namespace FalconeEngine
 
 			float percent = 0.05;
 			float slop = 0.01;
-			Vector2 correction = _data.normal * max(_data.penetration - slop, 0.0f) / (_data.object->GetRigidBody()->GetInverseMass() + _data.other->GetRigidBody()->GetInverseMass()) * percent;
+            Vector2 correction = _data.normal * std::max(_data.penetration - slop, 0.0f) / (_data.object->GetRigidBody()->GetInverseMass() + _data.other->GetRigidBody()->GetInverseMass()) * percent;
 			Vector2 objPosition = _data.object->GetPosition();
 			Vector2 otherPosition = _data.other->GetPosition();
 

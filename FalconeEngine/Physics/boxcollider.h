@@ -1,8 +1,8 @@
 #ifndef BOXCOLLIDER_H
 #define BOXCOLLIDER_H
 
-#include <collider.h>
-#include "Vector2.h"
+#include "collider.h"
+#include "../Core/Vector2.h"
 
 namespace FalconeEngine
 {

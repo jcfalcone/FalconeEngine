@@ -1,8 +1,8 @@
 #ifndef POLYCOLLIDER_H
 #define POLYCOLLIDER_H
 
-#include <collider.h>
-#include "../FalconeEngine/mathf.h"
+#include "collider.h"
+#include "../Core/mathf.h"
 
 namespace FalconeEngine
 {

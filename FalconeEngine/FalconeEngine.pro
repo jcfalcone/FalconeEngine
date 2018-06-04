@@ -23,11 +23,55 @@ DEFINES += QT_DEPRECATED_WARNINGS
 #DEFINES += QT_DISABLE_DEPRECATED_BEFORE=0x060000    # disables all the APIs deprecated before Qt 6.0.0
 
 SOURCES += \
-        falconeengine.cpp
+    Core/behavior.cpp \
+    Core/Component.cpp \
+    Core/mathf.cpp \
+    Core/Object.cpp \
+    Core/rect.cpp \
+    Core/Vector2.cpp \
+    Core/Vector3.cpp \
+    Managers/eventtemplate.cpp \
+    Managers/ObjectControl.cpp \
+    Managers/rendertemplate.cpp \
+    Managers/scenesystemtemplate.cpp \
+    Managers/scenetemplate.cpp \
+    Managers/soundSystem.cpp \
+    Managers/UISystem.cpp \
+    Managers/uitemplate.cpp \
+    Physics/boxcollider.cpp \
+    Physics/collider.cpp \
+    Physics/Physics.cpp \
+    Physics/polycollider.cpp \
+    Physics/rigidbody.cpp \
+    Physics/spherecollider.cpp \
+    Render/renderspritetemplate.cpp
 
 HEADERS += \
-        falconeengine.h \
-        falconeengine_global.h 
+    Core/behavior.h \
+    Core/Component.h \
+    Core/mathf.h \
+    Core/Object.h \
+    Core/rect.h \
+    Core/Vector2.h \
+    Core/Vector3.h \
+    Managers/eventtemplate.h \
+    Managers/ObjectControl.h \
+    Managers/objectcontroltemplate.h \
+    Managers/rendertemplate.h \
+    Managers/scenesystemtemplate.h \
+    Managers/scenetemplate.h \
+    Managers/soundSystem.h \
+    Managers/UISystem.h \
+    Managers/uitemplate.h \
+    Physics/boxcollider.h \
+    Physics/collider.h \
+    Physics/Physics.h \
+    Physics/polycollider.h \
+    Physics/rigidbody.h \
+    Physics/spherecollider.h \
+    Render/renderspritetemplate.h \
+    Managers/eventdefinitions.h \
+    falconeengine.h
 
 unix {
     target.path = /usr/lib

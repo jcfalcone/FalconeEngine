@@ -5,8 +5,7 @@
 #include <string>
 #include <sstream>
 #include <iostream>
-//#include <SDL_ttf.h>
-#include "Vector2.h"
+#include "../Core/Vector2.h"
 #include "ObjectControl.h"
 
 class UIMsg

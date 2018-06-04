@@ -1,5 +1,5 @@
 #include "ObjectControl.h"
-#include "Physics.h"
+#include "../Physics/Physics.h"
 
 #include "rendertemplate.h"
 #include "eventtemplate.h"

@@ -2,7 +2,6 @@
 #define UITEMPLATE_H
 
 #include <string>
-#include "../stdafx.h"
 
 namespace FalconeEngine
 {

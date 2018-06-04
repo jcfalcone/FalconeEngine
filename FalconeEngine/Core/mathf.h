@@ -2,6 +2,7 @@
 #define MATHF_H
 
 #include "Vector2.h"
+#include <cmath>
 
 struct Matrix22
 {

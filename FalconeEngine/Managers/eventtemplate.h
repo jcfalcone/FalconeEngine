@@ -1,7 +1,7 @@
 #ifndef EVENTTEMPLATE_H
 #define EVENTTEMPLATE_H
 
-#include "Vector2.h"
+#include "../Core/Vector2.h"
 #include "eventdefinitions.h"
 #include <string>
 

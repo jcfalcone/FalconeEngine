@@ -7,6 +7,7 @@
 #include "rigidbody.h"
 
 #include <algorithm>
+#include <float.h>
 #include <math.h>
 
 namespace FalconeEngine
@@ -43,7 +44,7 @@ namespace FalconeEngine
 
 		float SphereCollider::CalcMass(float _density)
 		{
-			float radiusCM = this->radius * UNITTOCM;
+            float radiusCM = this->radius;// * UNITTOCM;
 			float volume = (4.0f / 3.0f) * M_PI * (radiusCM *  radiusCM * radiusCM);
 
 			float mass = _density * volume;
@@ -118,11 +119,11 @@ namespace FalconeEngine
 			{
 				// Transform circle center to Polygon model space
 				Vector2 center = this->GetPosition();
-				center = collider->GetMatrix().Transpose() * (center - collider->GetPosition());
+                //center = collider->GetMatrix().Transpose() * (center - collider->GetPosition()); -- TODO
 
 				// Find edge with minimum penetration
 				// Exact concept as using support points in Polygon vs Polygon
-				float separation = -FLT_MAX;
+                float separation = 0;//-FLT_MAX; -- TODO
 				int faceNormal = 0;
 				for (int count = 0;count < collider->GetVerticesCount(); ++count)
 				{
@@ -173,7 +174,7 @@ namespace FalconeEngine
 					normal = (collider->GetMatrix() * normal);
 					normal = normal.normalize();
 					this->lastData.normal = normal;
-					vertice1 = collider->GetMatrix() * (vertice1 + collider->GetPosition());
+                    //vertice1 = collider->GetMatrix() * (vertice1 + collider->GetPosition()); -- TODO
 					this->lastData.contacts.push_back(vertice1);
 				}
 				// Closest to v2
@@ -185,7 +186,7 @@ namespace FalconeEngine
 					}
 
 					Vector2 normal = vertice2 - center;
-					vertice2 = collider->GetMatrix() * (vertice2 + collider->GetPosition());
+                    //vertice2 = collider->GetMatrix() * (vertice2 + collider->GetPosition()); -- TODO
 					this->lastData.contacts.push_back(vertice2);
 					this->lastData.normal = (collider->GetMatrix() * normal);
 					this->lastData.normal = this->lastData.normal.normalize();

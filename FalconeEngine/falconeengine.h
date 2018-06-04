@@ -1,4 +1,14 @@
 #ifndef FALCONEENGINE_H
 #define FALCONEENGINE_H
 
+
+#include "Core/Vector2.h"
+#include "Core/Vector3.h"
+
+#include "Core/behavior.h"
+#include "Core/Object.h"
+
+#include "Managers/ObjectControl.h"
+
+
 #endif // FALCONEENGINE_H

@@ -1,5 +1,5 @@
 #include "collider.h"
-#include "../stdafx.h"
+#include "../Managers/ObjectControl.h"
 
 namespace FalconeEngine
 {

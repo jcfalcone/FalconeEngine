@@ -1,7 +1,8 @@
 #include "rigidbody.h"
 
 #include "boxcollider.h"
-
+#include <float.h>
+#include <cmath>
 #include <algorithm>
 
 namespace FalconeEngine
@@ -173,7 +174,7 @@ namespace FalconeEngine
 				impulseS /= (float)countContact;
 
 				Vector2 impulse = _hitData->normal * impulseS;
-				this->ApplyImpulse(impulse * -1, radiiObj);
+                //this->ApplyImpulse(impulse * -1, radiiObj); -- TODO
 				otherRB->ApplyImpulse(impulse, radiiOther);
 
 				//Friction
@@ -206,7 +207,7 @@ namespace FalconeEngine
 					tangentImpulse = tangent * (impulse * -1) * dynamicFriction;
 				}
 
-				this->ApplyImpulse(tangentImpulse * -1, radiiObj);
+                //this->ApplyImpulse(tangentImpulse * -1, radiiObj); -- TODO
 				this->ApplyImpulse(tangentImpulse, radiiOther);
 			}
 		}

@@ -1,11 +1,11 @@
 #ifndef COLLIDER_H
 #define COLLIDER_H
 
-#include <Object.h>
-#include <Physics.h>
-#include "Vector2.h"
-#include "Component.h"
-#include <rect.h>
+#include "../Core/Object.h"
+#include "Physics.h"
+#include "../Core/Vector2.h"
+#include "../Core/Component.h"
+#include "../Core/rect.h"
 #include <string>
 
 namespace FalconeEngine
