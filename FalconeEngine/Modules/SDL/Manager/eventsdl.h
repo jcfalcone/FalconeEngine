@@ -4,6 +4,8 @@
 #include "../../../Managers/eventtemplate.h"
 #include <SDL.h>
 
+using namespace FalconeEngine;
+
 class eventSDL : public eventTemplate
 {
     SDL_Event event;

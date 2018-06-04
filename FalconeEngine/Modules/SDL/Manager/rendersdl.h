@@ -4,10 +4,10 @@
 #include <string>
 #include <SDL.h>
 
-#include "FalconeEngine/rendertemplate.h"
-#include "FalconeEngine/Vector2.h"
+#include "../../../Managers/rendertemplate.h"
+#include "../../../Core/Vector2.h"
 
-class renderSpriteTemplate;
+using namespace FalconeEngine;
 
 class renderSDL : public renderTemplate
 {
@@ -20,8 +20,6 @@ public:
 
     void startRenderer();
     void endRenderer();
-
-    renderSpriteTemplate * loadSprite(std::string path);
 
     SDL_Renderer * getRender() { return this->render; }
 };

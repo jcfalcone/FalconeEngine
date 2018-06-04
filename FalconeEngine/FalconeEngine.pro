@@ -37,7 +37,6 @@ SOURCES += \
     Managers/scenetemplate.cpp \
     Managers/soundSystem.cpp \
     Managers/UISystem.cpp \
-    Managers/uitemplate.cpp \
     Physics/boxcollider.cpp \
     Physics/collider.cpp \
     Physics/Physics.cpp \
@@ -48,7 +47,7 @@ SOURCES += \
     Modules/SDL/Manager/eventsdl.cpp \
     Modules/SDL/Manager/rendersdl.cpp \
     Modules/SDL/Manager/UISystem.cpp \
-    Modules/SDL/Objects/renderspritesdl.cpp
+    Modules/SDL/Objects/spritesdl.cpp
 
 HEADERS += \
     Core/behavior.h \
@@ -66,7 +65,6 @@ HEADERS += \
     Managers/scenetemplate.h \
     Managers/soundSystem.h \
     Managers/UISystem.h \
-    Managers/uitemplate.h \
     Physics/boxcollider.h \
     Physics/collider.h \
     Physics/Physics.h \
@@ -78,8 +76,9 @@ HEADERS += \
     Modules/SDL/Manager/eventsdl.h \
     Modules/SDL/Manager/rendersdl.h \
     Modules/SDL/Manager/UISystem.h \
-    Modules/SDL/Objects/renderspritesdl.h \
-    FalconeEngine
+    FalconeEngine \
+    Modules/SDL/Objects/spritesdl.h \
+    Modules/SDL/sdl.h
 
 unix {
     target.path = /usr/lib

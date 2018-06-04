@@ -1,8 +1,7 @@
 #include "rendersdl.h"
 #include <iostream>
 #include <SDL_image.h>
-#include "FalconeEngine/renderspritesdl.h"
-#include "FalconeEngine/rendertemplate.h"
+#include "../Objects/renderspritesdl.h"
 
 renderSDL::renderSDL(std::string windowTitle, Vector2 position, Vector2 size): renderTemplate(windowTitle), render(nullptr), window(nullptr)
 {
@@ -29,47 +28,6 @@ renderSDL::renderSDL(std::string windowTitle, Vector2 position, Vector2 size): r
         std::cerr << "SDL_CreateRenderer Error: " << SDL_GetError() << std::endl;
         return;
     }
-
-
-    /*SDL_Texture		* menuOp;
-    SDL_Rect		src, dest;
-
-    SDL_Texture *texture = IMG_LoadTexture(this->render, "cards-1.3/3_of_diamonds.png");
-
-    if (!texture)
-    {
-        std::cerr << "IMG_LoadTexture(texture)2  Error: " << IMG_GetError() << std::endl;
-    }
-
-    menuOp = IMG_LoadTexture(this->renderSDL, "C:/Projects/VisualStudio/SDL_Week9/Debug/Lab/Pong_MenuOp1.bmp");
-
-    if (!menuOp)
-    {
-        std::cerr << "IMG_LoadTexture(menuOp) Error: " << IMG_GetError() << std::endl;
-        system("PAUSE");
-        return;
-    }
-
-    src.x = 125;
-    src.y = 155;
-    src.h = 50;
-    src.w = 387;
-
-    dest.x = 125;
-    dest.y = 155;
-    dest.h = 50;
-    dest.w = 387;
-
-    //Drawing textures to screen
-    SDL_RenderCopy(this->renderSDL, menuOp, nullptr, &dest);
-
-
-    //Wait for 2 seconds
-    SDL_Delay(2000);
-
-    //Clean Up Project
-    SDL_DestroyTexture(texture);
-    SDL_DestroyTexture(menuOp);*/
 }
 
 renderSDL::~renderSDL()
@@ -90,11 +48,4 @@ void renderSDL::endRenderer()
 {
     //Update Screen
     SDL_RenderPresent(this->render);
-}
-
-renderSpriteTemplate *renderSDL::loadSprite(std::string path)
-{
-    renderSpriteSDL* sprite = new renderSpriteSDL(this);
-    sprite->load(path);
-    return sprite;
 }
