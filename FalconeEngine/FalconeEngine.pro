@@ -78,7 +78,7 @@ HEADERS += \
     Modules/SDL/Manager/UISystem.h \
     FalconeEngine \
     Modules/SDL/Objects/spritesdl.h \
-    Modules/SDL/sdl.h
+    Modules/SDL/SDL
 
 unix {
     target.path = /usr/lib
