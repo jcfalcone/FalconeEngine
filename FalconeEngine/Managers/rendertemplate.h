@@ -5,7 +5,6 @@
 
 namespace FalconeEngine
 {
-    class renderSpriteTemplate;
 
     class renderTemplate
     {
@@ -16,8 +15,6 @@ namespace FalconeEngine
 
         virtual void startRenderer() = 0;
         virtual void endRenderer() = 0;
-
-        virtual renderSpriteTemplate * loadSprite(std::string path) = 0;
     };
 }
 
