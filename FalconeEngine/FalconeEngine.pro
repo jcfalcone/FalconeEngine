@@ -44,7 +44,11 @@ SOURCES += \
     Physics/polycollider.cpp \
     Physics/rigidbody.cpp \
     Physics/spherecollider.cpp \
-    Render/renderspritetemplate.cpp
+    Render/renderspritetemplate.cpp \
+    Modules/SDL/Manager/eventsdl.cpp \
+    Modules/SDL/Manager/rendersdl.cpp \
+    Modules/SDL/Manager/UISystem.cpp \
+    Modules/SDL/Objects/renderspritesdl.cpp
 
 HEADERS += \
     Core/behavior.h \
@@ -71,7 +75,11 @@ HEADERS += \
     Physics/spherecollider.h \
     Render/renderspritetemplate.h \
     Managers/eventdefinitions.h \
-    falconeengine.h
+    Modules/SDL/Manager/eventsdl.h \
+    Modules/SDL/Manager/rendersdl.h \
+    Modules/SDL/Manager/UISystem.h \
+    Modules/SDL/Objects/renderspritesdl.h \
+    FalconeEngine
 
 unix {
     target.path = /usr/lib
