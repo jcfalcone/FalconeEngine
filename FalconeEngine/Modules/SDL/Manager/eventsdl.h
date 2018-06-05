@@ -12,10 +12,17 @@ class eventSDL : public eventTemplate
 public:
     eventSDL();
 
-    Vector2 mousePosition();
-    bool mouseClick(mouseEvent typeEvent);
 
-    bool quit();
+    bool HasCommands() override;
+    Command PopCommands() override;
+
+    Vector2 mousePosition() override;
+    bool mouseClick(mouseEvent _typeEvent) override;
+
+    bool isQuiting() override;
+    void Quit() override;
+
+    void AddInput(Command _command) override;
 };
 
 #endif // EVENTSDL_H

@@ -6,6 +6,15 @@ eventSDL::eventSDL():eventTemplate()
 
 }
 
+bool eventSDL::HasCommands()
+{
+
+}
+
+Command eventSDL::PopCommands()
+{
+
+}
 
 Vector2 eventSDL::mousePosition()
 {
@@ -21,14 +30,14 @@ Vector2 eventSDL::mousePosition()
     return Vector2(x,y);
 }
 
-bool eventSDL::mouseClick(mouseEvent typeEvent)
+bool eventSDL::mouseClick(mouseEvent _typeEvent)
 {
     while(SDL_PollEvent(&event))
     {
         switch(event.type)
         {
             case SDL_MOUSEBUTTONUP:
-                if(event.button.button == SDL_BUTTON_LEFT)
+                if(event.button.button == SDL_BUTTON_LEFT && _typeEvent == mouseEvent::LEFTBUTTON)
                 {
                     return true;
                 }
@@ -40,7 +49,7 @@ bool eventSDL::mouseClick(mouseEvent typeEvent)
 }
 
 
-bool eventSDL::quit()
+bool eventSDL::isQuiting()
 {
     while(SDL_PollEvent(&event))
     {
@@ -53,4 +62,8 @@ bool eventSDL::quit()
     }
 
     return false;
+}
+
+void eventSDL::Quit()
+{
 }
