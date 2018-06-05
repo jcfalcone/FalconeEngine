@@ -2,6 +2,7 @@
 #define SDL_H
 
 #include "Manager/rendersdl.h"
+#include "Manager/eventsdl.h"
 
 #include "Objects/spritesdl.h"
 
