@@ -9,6 +9,7 @@
 #include "Core/Object.h"
 
 #include "Managers/ObjectControl.h"
+#include "Managers/eventtemplate.h"
 
 
 #endif // FALCONEENGINE_H
