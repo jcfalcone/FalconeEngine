@@ -67,3 +67,8 @@ bool eventSDL::isQuiting()
 void eventSDL::Quit()
 {
 }
+
+void eventSDL::AddInput(Command _command)
+{
+
+}
