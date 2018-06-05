@@ -10,25 +10,11 @@
 
 using namespace FalconeEngine;
 
-class UIMsg
-{
-	public:
-        UIMsg(){}//std::string msg, Vector2 pos) : message(msg), position(pos) { };
-
-		std::string message;
-        Vector2 position;
-        Vector2 scale;
-        SDL_Surface *text;
-        SDL_Texture* Message;
-};
-
-class UISystem
+class UISystem/* : public UITemplate*/
 {
 private:
-	std::map<int, UIMsg *> * uiMap;
 	int uiSequence;
     TTF_Font        *gameFont      = NULL;
-    SDL_Color White = {255, 255, 255};  // this is the color in rgb format, maxing out all would give you the color white, and it will be your text's color
 
     class renderSDL * render;
 public:
@@ -39,6 +25,7 @@ public:
 	void updateString(int id, std::string msg);
 
 	void Render();
+    static const SDL_Color White = {255, 255, 255};  // this is the color in rgb format, maxing out all would give you the color white, and it will be your text's color
 };
 
 #endif // UISYSTEM

@@ -35,10 +35,10 @@ UISystem::~UISystem()
 
 int UISystem::addElement(UIMsg * msg)
 {
-    msg->text    = TTF_RenderText_Solid(this->gameFont, msg->message.c_str(), this->White);
+    /*msg->text    = TTF_RenderText_Solid(this->gameFont, msg->message.c_str(), this->White);
     msg->Message = SDL_CreateTextureFromSurface(this->render->getRender(), msg->text); //now you can convert it into a texture
 
-    this->uiMap[this->uiSequence] = msg;
+    this->uiMap[this->uiSequence] = msg;*/
 
 	return this->uiSequence++;
 }
