@@ -2,6 +2,7 @@
 #define UISDL_H
 
 #include "../../../Core/Component.h"
+#include <string>
 
 class UISDL : public FalconeEngine::Component
 {
@@ -11,8 +12,6 @@ public:
     void Start() override;
     void Update(float _deltaTime) override;
     void Render() override;
-
-    void SetPath(std::string _path);
 };
 
 #endif // UISDL_H
