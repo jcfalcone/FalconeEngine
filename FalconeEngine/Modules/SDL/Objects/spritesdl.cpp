@@ -30,7 +30,7 @@ void SpriteSDL::Start()
 
             this->rend = render;
 
-            this->texture = IMG_LoadTexture(render, this->path.c_str());
+            this->texture = IMG_LoadTexture(render->getRender(), this->path.c_str());
 
             if (!this->texture)
             {
