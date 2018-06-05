@@ -1,6 +1,7 @@
 #include "spritesdl.h"
 #include "../../../Managers/ObjectControl.h"
 #include "../Manager/rendersdl.h"
+#include <SDL_image.h>
 
 SpriteSDL::SpriteSDL() : path(""), rend(nullptr), texture(nullptr)
 {
