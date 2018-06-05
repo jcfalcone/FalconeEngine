@@ -25,7 +25,7 @@ public:
 	void updateString(int id, std::string msg);
 
 	void Render();
-    static const SDL_Color White = {255, 255, 255};  // this is the color in rgb format, maxing out all would give you the color white, and it will be your text's color
+    //static const SDL_Color White = {255, 255, 255};  // this is the color in rgb format, maxing out all would give you the color white, and it will be your text's color
 };
 
 #endif // UISYSTEM
