@@ -21,7 +21,7 @@ public:
 	UISystem();
     ~UISystem();
 
-	int addElement(UIMsg * msg);
+    //int addElement(UIMsg * msg);
 	void updateString(int id, std::string msg);
 
 	void Render();
