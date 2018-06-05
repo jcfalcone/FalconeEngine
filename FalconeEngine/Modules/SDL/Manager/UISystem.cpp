@@ -8,7 +8,7 @@
 
 UISystem::UISystem() : uiSequence(0)
 {
-	this->uiMap = new std::map<int, UIMsg *>();
+    /*this->uiMap = new std::map<int, UIMsg *>();
 
     this->gameFont      = TTF_OpenFont("Fonts/FreeSerif.ttf", 50);
 
@@ -20,17 +20,17 @@ UISystem::UISystem() : uiSequence(0)
 
     atexit(TTF_Quit);
 
-    this->render = (renderSDL*)ObjectControl::Instance()->getRender();
+    this->render = (renderSDL*)ObjectControl::Instance()->getRender();*/
 }
 
 UISystem::~UISystem()
 {
-	for (auto iterator = this->uiMap->begin(); iterator != this->uiMap->end(); iterator++)
+    /*for (auto iterator = this->uiMap->begin(); iterator != this->uiMap->end(); iterator++)
 	{
 		delete iterator->second;
 	}
 
-	delete this->uiMap;
+    delete this->uiMap;*/
 }
 
 int UISystem::addElement(UIMsg * msg)
@@ -45,17 +45,17 @@ int UISystem::addElement(UIMsg * msg)
 
 void UISystem::updateString(int id, std::string msg)
 {
-	auto uiObj = this->uiMap->find(id);
+    /*auto uiObj = this->uiMap->find(id);
 
 	if (uiObj != this->uiMap->end())
 	{
 		uiObj->second->message = msg;
-	}
+    }*/
 }
 
 void UISystem::Render()
 {
-    for (auto iterator = this->uiMap->begin(); iterator != this->uiMap->end(); iterator++)
+    /*for (auto iterator = this->uiMap->begin(); iterator != this->uiMap->end(); iterator++)
     {
         SDL_Rect		dest;
 
@@ -65,5 +65,5 @@ void UISystem::Render()
         dest.w = iterator->second->scale.x;
 
         SDL_RenderCopy(this->render->getRender(), iterator->second->Message, nullptr, &dest);
-	}
+    }*/
 }
