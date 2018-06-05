@@ -1,7 +1,6 @@
 #include "rendersdl.h"
 #include <iostream>
 #include <SDL_image.h>
-#include "../Objects/renderspritesdl.h"
 
 renderSDL::renderSDL(std::string windowTitle, Vector2 position, Vector2 size): renderTemplate(windowTitle), render(nullptr), window(nullptr)
 {
