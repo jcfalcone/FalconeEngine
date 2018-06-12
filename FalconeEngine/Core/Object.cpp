@@ -121,6 +121,7 @@ namespace FalconeEngine
 		this->components.insert(std::pair<size_t, Component *>(hash, _component));
 
 		_component->SetParent(this);
+        _component->Start();
 
 		return true;
 	}
@@ -133,7 +134,7 @@ namespace FalconeEngine
 
 	void Object::Start()
 	{
-		this->StartComponents();
+        //this->StartComponents();
 	}
 
 	void Object::StartComponents()

@@ -6,4 +6,9 @@ namespace FalconeEngine
     {
 
     }
+
+    renderTemplate::~renderTemplate()
+    {
+
+    }
 }

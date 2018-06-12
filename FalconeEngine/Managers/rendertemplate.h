@@ -12,6 +12,7 @@ namespace FalconeEngine
         std::string windowTitle;
     public:
         renderTemplate(std::string windowTitle);
+        ~renderTemplate();
 
         virtual void startRenderer() = 0;
         virtual void endRenderer() = 0;
