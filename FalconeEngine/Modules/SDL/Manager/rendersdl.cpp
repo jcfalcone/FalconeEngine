@@ -39,12 +39,21 @@ renderSDL::~renderSDL()
 
 void renderSDL::startRenderer()
 {
+    if(this->render == nullptr)
+    {
+        return;
+    }
     //Clear Scren to prepare to drawing
     SDL_RenderClear(this->render);
 }
 
 void renderSDL::endRenderer()
 {
+    if(this->render == nullptr)
+    {
+        return;
+    }
+
     //Update Screen
     SDL_RenderPresent(this->render);
 }

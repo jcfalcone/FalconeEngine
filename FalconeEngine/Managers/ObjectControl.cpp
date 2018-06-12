@@ -137,6 +137,8 @@ namespace FalconeEngine
         auto iterator = this->objMap->begin();
         while (iterator != this->objMap->end())
         {
+            std::cout << iterator->second->GetName() << std::endl;
+
             iterator->second->Update(frameTime);
 
             if (iterator->second->removeObject())
@@ -148,12 +150,12 @@ namespace FalconeEngine
             {
                 iterator++;
             }
-
-
         }
 
         if(this->eventManager != nullptr)
         {
+            std::cout << "Event Manager" << std::endl;
+
             if(this->eventManager->isQuiting())
             {
                 this->exit();
@@ -165,15 +167,17 @@ namespace FalconeEngine
 			this->fixedTime = FIXEDDELTATIME;
 		}
 
-		while (this->fixedTime > frameTime)
-		{
-			if (this->physicsManager)
-			{
-				this->physicsManager->Update(frameTime);
-			}
+        if (this->physicsManager != nullptr)
+        {
+            std::cout << "Physic Manager" << std::endl;
 
-			this->fixedTime -= frameTime;
-		}
+            while (this->fixedTime > frameTime)
+            {
+                this->physicsManager->Update(frameTime);
+
+                this->fixedTime -= frameTime;
+            }
+        }
     }
 
     void ObjectControl::Render()
