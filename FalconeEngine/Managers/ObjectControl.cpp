@@ -188,10 +188,10 @@ namespace FalconeEngine
             iterator->second->Render();
         }
 
-        if(this->physicsManager)
+        /*if(this->physicsManager)
         {
             this->physicsManager->Render();
-        }
+        }*/
 
         if(this->uiManager)
         {

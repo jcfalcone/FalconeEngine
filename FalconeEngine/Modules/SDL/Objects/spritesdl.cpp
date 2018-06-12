@@ -56,7 +56,7 @@ void SpriteSDL::Render()
     this->dest.h = this->parent->getScale().y;
     this->dest.w = this->parent->getScale().x;
 
-    SDL_RenderCopy(this->rend->getRender(), this->texture, nullptr, &dest);
+    SDL_RenderCopyEx(this->rend->getRender(), this->texture, nullptr, &dest, this->parent->getRotation(), nullptr, SDL_FLIP_NONE);
 }
 
 void SpriteSDL::SetPath(std::string _path)
