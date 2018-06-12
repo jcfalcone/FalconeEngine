@@ -34,6 +34,9 @@ renderSDL::~renderSDL()
     //SDL Manager
     SDL_DestroyRenderer(this->render);
     SDL_DestroyWindow(this->window);
+
+    this->render = nullptr;
+    this->window = nullptr;
 }
 
 

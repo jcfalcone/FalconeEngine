@@ -32,7 +32,7 @@ namespace FalconeEngine
     {
         this->objID = id;
 
-        if(this->name == "Unknown")
+        if(this->name == "Unknown" || this->name.length() <= 0)
         {
             this->name = "object_"+id;
         }
