@@ -40,7 +40,7 @@ namespace FalconeEngine
 
     int Object::SetSequence(int _sequence)
     {
-        this->sequence = _sequence
+        this->sequence = _sequence;
         ObjectControl::Instance()->SortObjects();
     }
 
