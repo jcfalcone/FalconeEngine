@@ -25,6 +25,7 @@ namespace FalconeEngine
         bool	visible;
 
         int		objID;
+        int     sequence = 0;
 
         std::string tag;
         std::string name;
@@ -45,6 +46,7 @@ namespace FalconeEngine
         //void setParent(FalconeEngine::ObjectControl * prt) { this->parent = prt; }
 
         void setId(int id);
+        int SetSequence(int _sequence);
 
         void setPosition(class Vector2 pos);
         void setScale(class Vector2 scl);
@@ -57,6 +59,8 @@ namespace FalconeEngine
         bool removeObject() { return this->destroy; }
 
         int getId() const { return this->objID; }
+
+        int GetSequence() const { return this->sequence; }
 
         std::string GetName() const { return this->name; }
 

@@ -64,6 +64,8 @@ namespace FalconeEngine
         void Update(float deltaTime);
         void Render();
 
+        void SortObjects();
+
         void updateElapsedTime(float deltaTime);
         void SetRenderer(renderTemplate * render) { this->gameRenderer = render; }
 		void SetPhysics(Physics::Physics * _physics) { this->physicsManager = _physics; }

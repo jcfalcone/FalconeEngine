@@ -38,6 +38,12 @@ namespace FalconeEngine
         }
     }
 
+    int Object::SetSequence(int _sequence)
+    {
+        this->sequence = _sequence
+        ObjectControl::Instance()->SortObjects();
+    }
+
     void Object::setPosition(Vector2 pos)
     {
         this->position = pos;

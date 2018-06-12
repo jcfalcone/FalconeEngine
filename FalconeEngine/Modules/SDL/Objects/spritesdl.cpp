@@ -46,7 +46,7 @@ void SpriteSDL::Update(float _deltaTime)
 
 void SpriteSDL::Render()
 {
-    if(this->rend == nullptr || this->path.length() == 0)
+    if(this->rend == nullptr || this->path.length() == 0 || !this->parent->isVisible())
     {
         return;
     }
