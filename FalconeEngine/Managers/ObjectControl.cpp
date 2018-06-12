@@ -206,10 +206,10 @@ namespace FalconeEngine
 
     void ObjectControl::SortObjects()
     {
-        std::sort(this->objMap->begin(), this->objMap->end(), [](std::pair<int, Object *> &objA, std::pair<int, Object *> &objB)
+        /*std::sort(this->objMap->begin(), this->objMap->end(), [](std::pair<int, Object *> &objA, std::pair<int, Object *> &objB)
         {
             return (objA.second->GetSequence() > objB.second->GetSequence())
-        });
+        });*/
     }
 
     void ObjectControl::updateElapsedTime(float deltaTime)
