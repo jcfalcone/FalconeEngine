@@ -5,22 +5,22 @@ ImageSDL::ImageSDL(std::string _path, std::string _name, FalconeEngine::Object *
     this->AddComponent("SpriteRender", new SpriteSDL(_path));
 }
 
-void ImageSDL::Start() override
+void ImageSDL::Start()
 {
     FalconeEngine::Object::Start();
 }
 
-void ImageSDL::Update(float _deltaTime) override
+void ImageSDL::Update(float _deltaTime)
 {
     FalconeEngine::Object::Update(_deltaTime);
 }
 
-void ImageSDL::Render() override
+void ImageSDL::Render()
 {
     FalconeEngine::Object::Render();
 }
 
-void ImageSDL::OnDestroy() override
+void ImageSDL::OnDestroy()
 {
     FalconeEngine::Object::OnDestroy();
 }
