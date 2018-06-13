@@ -48,7 +48,8 @@ SOURCES += \
     Modules/SDL/Manager/rendersdl.cpp \
     Modules/SDL/Manager/UISystem.cpp \
     Modules/SDL/Objects/spritesdl.cpp \
-    Modules/SDL/Objects/uisdl.cpp
+    Modules/SDL/Objects/uisdl.cpp \
+    Modules/SDL/Objects/imagesdl.cpp
 
 HEADERS += \
     Core/behavior.h \
@@ -80,7 +81,8 @@ HEADERS += \
     FalconeEngine \
     Modules/SDL/Objects/spritesdl.h \
     Modules/SDL/SDL \
-    Modules/SDL/Objects/uisdl.h
+    Modules/SDL/Objects/uisdl.h \
+    Modules/SDL/Objects/imagesdl.h
 
 unix {
     target.path = /usr/lib
