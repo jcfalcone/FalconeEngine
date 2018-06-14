@@ -37,6 +37,8 @@ public:
 
     SDL_Color GetColor() const { return this->color; }
     void SetColor(SDL_Color _color);
+
+    constexpr static const SDL_Color WHITE = {255, 255, 255};
 };
 
 #endif // UISDL_H
