@@ -2,7 +2,7 @@
 #include "../Manager/uisdlsystem.h"
 #include "../Manager/rendersdl.h"
 
-UISDL::UISDL(std::string _font, std::string _text, SDL_COLOR _color) : font(_font), text(_text), color(_color)
+UISDL::UISDL(std::string _font, std::string _text, SDL_Color _color) : font(_font), text(_text), color(_color)
 {
 }
 
@@ -56,7 +56,7 @@ void UISDL::SetFont(std::string _font)
     }
 }
 
-void UISDL::SetColor(SDL_COLOR _color)
+void UISDL::SetColor(SDL_Color _color)
 {
     if(this->color != _color)
     {
