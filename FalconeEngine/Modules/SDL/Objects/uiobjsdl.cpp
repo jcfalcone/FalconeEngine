@@ -1,8 +1,8 @@
 #include "uiobjsdl.h"
 
-UIObjSDL::UIObjSDL(std::string _font, std::string _name, FalconeEngine::Object *_parent) : Object(_name, _parent)
+UIObjSDL::UIObjSDL(std::string _font, std::string _text, SDL_Color _color, std::string _name, FalconeEngine::Object *_parent) : Object(_name, _parent)
 {
-    this->component = new UISDL(_path);
+    this->component = new UISDL(_font, _text, _color);
     this->AddComponent("UI Text", this->component);
 }
 

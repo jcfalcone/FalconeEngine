@@ -10,7 +10,7 @@ private:
     UISDL * component;
 
 public:
-    UIObjSDL();
+    UIObjSDL(std::string _font, std::string _text, SDL_Color _color, std::string _name, FalconeEngine::Object *_parent);
 
     void Start() override;
     void Update(float _deltaTime) override;
