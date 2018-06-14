@@ -36,7 +36,6 @@ SOURCES += \
     Managers/scenesystemtemplate.cpp \
     Managers/scenetemplate.cpp \
     Managers/soundSystem.cpp \
-    Managers/UISystem.cpp \
     Physics/boxcollider.cpp \
     Physics/collider.cpp \
     Physics/Physics.cpp \
@@ -46,10 +45,11 @@ SOURCES += \
     Render/renderspritetemplate.cpp \
     Modules/SDL/Manager/eventsdl.cpp \
     Modules/SDL/Manager/rendersdl.cpp \
-    Modules/SDL/Manager/UISystem.cpp \
     Modules/SDL/Objects/spritesdl.cpp \
     Modules/SDL/Objects/uisdl.cpp \
-    Modules/SDL/Objects/imagesdl.cpp
+    Modules/SDL/Objects/imagesdl.cpp \
+    Managers/UITemplate.cpp \
+    Modules/SDL/Manager/uisdlsystem.cpp
 
 HEADERS += \
     Core/behavior.h \
@@ -66,7 +66,6 @@ HEADERS += \
     Managers/scenesystemtemplate.h \
     Managers/scenetemplate.h \
     Managers/soundSystem.h \
-    Managers/UISystem.h \
     Physics/boxcollider.h \
     Physics/collider.h \
     Physics/Physics.h \
@@ -77,12 +76,13 @@ HEADERS += \
     Managers/eventdefinitions.h \
     Modules/SDL/Manager/eventsdl.h \
     Modules/SDL/Manager/rendersdl.h \
-    Modules/SDL/Manager/UISystem.h \
     FalconeEngine \
     Modules/SDL/Objects/spritesdl.h \
     Modules/SDL/SDL \
     Modules/SDL/Objects/uisdl.h \
-    Modules/SDL/Objects/imagesdl.h
+    Modules/SDL/Objects/imagesdl.h \
+    Managers/UITemplate.h \
+    Modules/SDL/Manager/uisdlsystem.h
 
 unix {
     target.path = /usr/lib
