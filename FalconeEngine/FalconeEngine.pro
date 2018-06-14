@@ -49,7 +49,8 @@ SOURCES += \
     Modules/SDL/Objects/uisdl.cpp \
     Modules/SDL/Objects/imagesdl.cpp \
     Managers/UITemplate.cpp \
-    Modules/SDL/Manager/uisdlsystem.cpp
+    Modules/SDL/Manager/uisdlsystem.cpp \
+    Modules/SDL/Objects/uiobjsdl.cpp
 
 HEADERS += \
     Core/behavior.h \
@@ -82,7 +83,8 @@ HEADERS += \
     Modules/SDL/Objects/uisdl.h \
     Modules/SDL/Objects/imagesdl.h \
     Managers/UITemplate.h \
-    Modules/SDL/Manager/uisdlsystem.h
+    Modules/SDL/Manager/uisdlsystem.h \
+    Modules/SDL/Objects/uiobjsdl.h
 
 unix {
     target.path = /usr/lib
