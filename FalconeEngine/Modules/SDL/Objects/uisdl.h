@@ -5,6 +5,8 @@
 #include "../../../Managers/ObjectControl.h"
 #include <string>
 #include <SDL.h>
+#include <SDL_image.h>
+#include <SDL_ttf.h>
 
 class UISDL : public FalconeEngine::Component
 {
