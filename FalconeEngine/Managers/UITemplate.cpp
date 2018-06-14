@@ -19,9 +19,11 @@ namespace FalconeEngine
 
     int UITemplate::AddElement(Component * msg)
     {
-        this->uiMap[this->uiSequence] = msg;
+        this->uiSequence++;
 
-        return this->uiSequence++;
+        this->uiMap->emplace(this->uiSequence, msg);
+
+        return this->uiSequence;
     }
 
     void UITemplate::Render()

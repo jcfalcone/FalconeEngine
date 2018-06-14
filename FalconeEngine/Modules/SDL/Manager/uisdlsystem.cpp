@@ -26,9 +26,9 @@ int UISDLSystem::AddElement(Component * _msg)
     return this->uiSequence++;*/
 }
 
-bool UISDLSystem::AddFont(std::string _name, std::string _path, int _size) override
+bool UISDLSystem::AddFont(std::string _name, std::string _path, int _size)
 {
-    this->fonts[_name] = TTF_OpenFont(_path, _size);
+    this->fonts[_name] = TTF_OpenFont(_path.c_str(), _size);
 
     if(TTF_Init() != 0)
     {

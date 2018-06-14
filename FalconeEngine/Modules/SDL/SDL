@@ -3,6 +3,7 @@
 
 #include "Manager/rendersdl.h"
 #include "Manager/eventsdl.h"
+#include "Manager/uisdlsystem.h"
 
 #include "Objects/spritesdl.h"
 #include "Objects/imagesdl.h"
