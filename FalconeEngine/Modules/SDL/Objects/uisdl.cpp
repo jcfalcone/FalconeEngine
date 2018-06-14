@@ -35,7 +35,7 @@ void UISDL::Render()
     this->dest.h = this->parent->getScale().y;
     this->dest.w = this->parent->getScale().x;
 
-    SDL_RenderCopyEx(this->rend->getRender(), this->Message, nullptr, &dest, this->parent->getRotation(), nullptr, SDL_FLIP_NONE);
+    SDL_RenderCopyEx(this->render->getRender(), this->Message, nullptr, &dest, this->parent->getRotation(), nullptr, SDL_FLIP_NONE);
 }
 
 void UISDL::SetText(std::string _text)
