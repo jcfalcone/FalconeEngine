@@ -58,9 +58,6 @@ void UISDL::SetFont(std::string _font)
 
 void UISDL::SetColor(SDL_Color _color)
 {
-    if(this->color != _color)
-    {
-        this->color = _color;
-        this->Start();
-    }
+    this->color = _color;
+    this->Start();
 }
