@@ -27,10 +27,9 @@ public:
 
 
 
-    template<typename T>
-    virtual T GetFont(std::string _name) override
+    TTF_Font * GetFont(std::string _name)
     {
-        return (T)&this->fonts[_name];
+        return this->fonts[_name];
     }
 
     void Render();

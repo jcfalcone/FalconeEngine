@@ -12,7 +12,7 @@ void UISDL::Start()
     if (this->render = dynamic_cast<renderSDL*>(FalconeEngine::ObjectControl::Instance()->getRender()))
     {
         this->uiManager = dynamic_cast<UISDLSystem*>(FalconeEngine::ObjectControl::Instance()->getUISystem());
-        TTF_Font * font = this->uiManager->GetFont<TTF_Font *>(this->font);
+        TTF_Font * font = this->uiManager->GetFont(this->font);
 
         this->textSdl    = TTF_RenderText_Solid(font, this->text.c_str(), this->color);
         this->Message = SDL_CreateTextureFromSurface(this->render->getRender(), this->textSdl); //now you can convert it into a texture
