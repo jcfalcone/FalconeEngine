@@ -29,9 +29,6 @@ namespace FalconeEngine
 
         virtual bool AddFont(std::string _name, std::string _path, int _size) = 0;
 
-        template<typename T>
-        virtual T GetFont(std::string _name) = 0;
-
         void Render();
     };
 }

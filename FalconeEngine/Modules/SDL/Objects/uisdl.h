@@ -13,9 +13,9 @@ class UISDL : public FalconeEngine::Component
 private:
     SDL_Rect		dest;
     class renderSDL   * render;
-    class UITemplate * uiManager;
+    class UISDLSystem * uiManager;
 
-    SDL_Surface *text;
+    SDL_Surface *textSdl;
     SDL_Texture* Message;
     SDL_Color color;
 
@@ -37,8 +37,6 @@ public:
 
     SDL_Color GetColor() const { return this->color; }
     void SetColor(SDL_Color _color);
-
-    static const SDL_Color White = {255, 255, 255};  // this is the color in rgb format, maxing out all would give you the color white, and it will be your text's color
 };
 
 #endif // UISDL_H
