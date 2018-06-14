@@ -8,5 +8,6 @@
 #include "Objects/spritesdl.h"
 #include "Objects/imagesdl.h"
 #include "Objects/uisdl.h"
+#include "Objects/uiobjsdl.h"
 
 #endif // SDL_H
