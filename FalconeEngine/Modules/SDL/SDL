@@ -6,5 +6,6 @@
 
 #include "Objects/spritesdl.h"
 #include "Objects/imagesdl.h"
+#include "Objects/uisdl.h"
 
 #endif // SDL_H
