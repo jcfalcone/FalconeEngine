@@ -24,6 +24,21 @@ public:
         this->component->SetText(_text);
     }
 
+    void SetText(int _text)
+    {
+        this->component->SetText(_text);
+    }
+
+    void SetText(float _text)
+    {
+        this->component->SetText(_text);
+    }
+
+    void SetText(double _text)
+    {
+        this->component->SetText(_text);
+    }
+
     std::string GetFont() const { return this->component->GetFont(); }
     void SetFont(std::string _font)
     {

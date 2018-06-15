@@ -24,6 +24,9 @@ private:
 
 public:
     UISDL(std::string _font, std::string _text, SDL_Color _color);
+    UISDL(std::string _font, int _text, SDL_Color _color);
+    UISDL(std::string _font, float _text, SDL_Color _color);
+    UISDL(std::string _font, double _text, SDL_Color _color);
 
     void Start() override;
     void Update(float _deltaTime) override;
@@ -31,6 +34,9 @@ public:
 
     std::string GetText() const { return this->text; }
     void SetText(std::string _text);
+    void SetText(int _text);
+    void SetText(double _text);
+    void SetText(float _text);
 
     std::string GetFont() const { return this->font; }
     void SetFont(std::string _font);
