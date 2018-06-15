@@ -6,6 +6,21 @@ UISDL::UISDL(std::string _font, std::string _text, SDL_Color _color) : font(_fon
 {
 }
 
+UISDL::UISDL(std::string _font, int _text, SDL_Color _color) : font(_font), text(std::to_string(_text)), color(_color)
+{
+
+}
+
+UISDL::UISDL(std::string _font, double _text, SDL_Color _color) : font(_font), text(std::to_string(_text)), color(_color)
+{
+
+}
+
+UISDL::UISDL(std::string _font, float _text, SDL_Color _color) : font(_font), text(std::to_string(_text)), color(_color)
+{
+
+}
+
 void UISDL::Start()
 {
 

@@ -97,6 +97,11 @@ namespace FalconeEngine
 		};
 
 		bool AddComponent(std::string _id, Component * _component);
+        bool HasComponent(std::string _id)
+        {
+            return this->components.find(_id) != this->components.end();
+        }
+
 		void RemoveComponent(std::string _id);
 
 		template<typename Type>

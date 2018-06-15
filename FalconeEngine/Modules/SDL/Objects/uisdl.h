@@ -24,6 +24,9 @@ private:
 
 public:
     UISDL(std::string _font, std::string _text, SDL_Color _color);
+    UISDL(std::string _font, int _text, SDL_Color _color);
+    UISDL(std::string _font, double _text, SDL_Color _color);
+    UISDL(std::string _font, float _text, SDL_Color _color);
 
     void Start() override;
     void Update(float _deltaTime) override;
