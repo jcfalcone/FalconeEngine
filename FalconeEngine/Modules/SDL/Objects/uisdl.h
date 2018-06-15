@@ -24,9 +24,6 @@ private:
 
 public:
     UISDL(std::string _font, std::string _text, SDL_Color _color);
-    UISDL(std::string _font, int _text, SDL_Color _color);
-    UISDL(std::string _font, double _text, SDL_Color _color);
-    UISDL(std::string _font, float _text, SDL_Color _color);
 
     void Start() override;
     void Update(float _deltaTime) override;
@@ -41,8 +38,8 @@ public:
     SDL_Color GetColor() const { return this->color; }
     void SetColor(SDL_Color _color);
 
-    static SDL_Color WHITE() const { return {255, 255, 255}; }
-    static SDL_Color BLACK() const { return {0, 0, 0}; }
+    static SDL_Color WHITE;
+    static SDL_Color BLACK;
 };
 
 #endif // UISDL_H

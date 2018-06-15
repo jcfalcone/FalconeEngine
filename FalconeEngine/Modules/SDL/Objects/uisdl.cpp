@@ -2,23 +2,11 @@
 #include "../Manager/uisdlsystem.h"
 #include "../Manager/rendersdl.h"
 
+SDL_Color UISDL::WHITE = {255, 255, 255};
+SDL_Color UISDL::BLACK = {0,0,0};
+
 UISDL::UISDL(std::string _font, std::string _text, SDL_Color _color) : font(_font), text(_text), color(_color)
 {
-}
-
-UISDL::UISDL(std::string _font, int _text, SDL_Color _color) : font(_font), text(std::to_string(_text)), color(_color)
-{
-
-}
-
-UISDL::UISDL(std::string _font, double _text, SDL_Color _color) : font(_font), text(std::to_string(_text)), color(_color)
-{
-
-}
-
-UISDL::UISDL(std::string _font, float _text, SDL_Color _color) : font(_font), text(std::to_string(_text)), color(_color)
-{
-
 }
 
 void UISDL::Start()
@@ -26,11 +14,13 @@ void UISDL::Start()
 
     if (this->render = dynamic_cast<renderSDL*>(FalconeEngine::ObjectControl::Instance()->getRender()))
     {
-        this->uiManager = dynamic_cast<UISDLSystem*>(FalconeEngine::ObjectControl::Instance()->getUISystem());
-        TTF_Font * font = this->uiManager->GetFont(this->font);
+        if(this->uiManager = dynamic_cast<UISDLSystem*>(FalconeEngine::ObjectControl::Instance()->getUISystem()))
+        {
+            TTF_Font * font = this->uiManager->GetFont(this->font);
 
-        this->textSdl    = TTF_RenderText_Solid(font, this->text.c_str(), this->color);
-        this->Message = SDL_CreateTextureFromSurface(this->render->getRender(), this->textSdl); //now you can convert it into a texture
+            this->textSdl    = TTF_RenderText_Solid(font, this->text.c_str(), this->color);
+            this->Message = SDL_CreateTextureFromSurface(this->render->getRender(), this->textSdl); //now you can convert it into a texture
+        }
     }
 }
 

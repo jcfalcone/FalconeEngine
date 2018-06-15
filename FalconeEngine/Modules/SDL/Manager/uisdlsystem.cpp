@@ -28,7 +28,7 @@ int UISDLSystem::AddElement(Component * _msg)
 
 bool UISDLSystem::AddFont(std::string _name, std::string _path, int _size)
 {
-    this->fonts[_name] = TTF_OpenFont(_path.c_str(), _size);
+    std::cout << _name << " - "<< _path << std::endl;
 
     if(TTF_Init() != 0)
     {
@@ -37,6 +37,10 @@ bool UISDLSystem::AddFont(std::string _name, std::string _path, int _size)
     }
 
     atexit(TTF_Quit);
+
+    this->fonts[_name] = TTF_OpenFont(_path.c_str(), _size);
+
+    std::cout << this->fonts[_name] << TTF_GetError() << std::endl;
 }
 
 void UISDLSystem::Render()
